@@ -1,12 +1,37 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <title>Avanti Shop</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+    <header>
+      <div class="disclaimer">
+        <p>
+          Ganhe <strong>R$10,00</strong> de desconto no seu primeiro pedido.
+          Utilize o cupom <span>DESCONTO10</span>
+        </p>
+      </div>
+      <div class="upper-header">
+        <img src="menu-icon.svg" alt="Menu" />
+        <img src="avanti-logo.svg" alt="Avanti" />
+        <div class="cart-container">
+          <span>2</span>
+          <img src="cart-icon.svg" alt="Carrinho" />
+        </div>
+      </div>
+      <div class="input-container">
+        <input type="text" placeholder="Digite aqui oque você procura" />
+        <img src="search-icon.svg" alt="Pesquisa" />
+      </div>
+    </header>
   </body>
 </html>
