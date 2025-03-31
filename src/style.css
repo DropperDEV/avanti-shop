@@ -11,26 +11,17 @@
 @layer base {
   body {
     font-family: "Nunito Sans", sans-serif;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
-    @apply text-sm;
+    @apply text-sm p-0 m-0 box-border h-screen;
   }
 
-  header {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    justify-content: center;
-    align-items: center;
+  header {    
+    @apply flex flex-col gap-4 justify-center items-center md:flex-row
   }
 }
 
 @layer components {
   .disclaimer {
-    @apply bg-blue p-2 text-white  text-center;
+    @apply bg-blue p-2 text-white  text-center w-full mb-4;
 
     & p {
       @apply font-bold;
@@ -44,7 +35,11 @@
     }
   }
   .upper-header {
-    @apply flex gap-4 justify-around mt-2 mb-4 items-center w-full;
+    @apply flex gap-4 justify-around mt-2 mb-4 items-center w-full md:flex-row w-full;
+
+    & #menu-item{
+      @apply md:hidden
+    }
   }
   .cart-container {
     @apply relative;
@@ -58,8 +53,15 @@
     }
   }
 
-  .input-container {
-    @apply px-2 flex border border-gray-200 w-80 rounded-xl;
+  .input-container-mobile {
+    @apply px-2 flex border border-gray-200 w-80 rounded-xl md:hidden;
+
+    & input {
+      @apply w-11/12 p-2  focus:outline-none placeholder:text-black;
+    }
+  }
+  .input-container-desk {
+    @apply px-2 flex border border-gray-200 w-80 rounded-xl hidden md:flex;
 
     & input {
       @apply w-11/12 p-2  focus:outline-none placeholder:text-black;
