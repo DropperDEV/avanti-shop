@@ -11,17 +11,17 @@
 @layer base {
   body {
     font-family: "Nunito Sans", sans-serif;
-    @apply text-sm p-0 m-0 box-border h-screen;
+    @apply text-sm p-0 m-0 box-border h-screen w-screen;
   }
 
-  header {    
-    @apply flex flex-col gap-4 justify-center items-center md:flex-row
+  header {
+    @apply flex flex-col gap-4 justify-center items-center;
   }
 }
 
 @layer components {
   .disclaimer {
-    @apply bg-blue p-2 text-white  text-center w-full mb-4;
+    @apply bg-blue p-2 text-white  text-center w-full;
 
     & p {
       @apply font-bold;
@@ -34,11 +34,14 @@
       @apply font-normal;
     }
   }
-  .upper-header {
-    @apply flex gap-4 justify-around mt-2 mb-4 items-center w-full md:flex-row w-full;
+  .upper-header-container {
+    @apply w-full flex flex-col items-center gap-3 px-4 justify-center lg:px-40;
+  }
+  .upper-wrapper {
+    @apply flex gap-4 justify-around mt-2 mb-4 items-center w-full lg:flex-row w-full;
 
-    & #menu-item{
-      @apply md:hidden
+    & #menu-item {
+      @apply lg:hidden ;
     }
   }
   .cart-container {
@@ -53,6 +56,10 @@
     }
   }
 
+  .label-input-wrapper {
+    @apply flex justify-center gap-12;
+  }
+
   .input-container-mobile {
     @apply px-2 flex border border-gray-200 w-80 rounded-xl md:hidden;
 
@@ -61,10 +68,40 @@
     }
   }
   .input-container-desk {
-    @apply px-2 flex border border-gray-200 w-80 rounded-xl hidden md:flex;
+    @apply md:w-xs lg:w-md xl:w-lg 2xl:w-xl md:flex border border-gray-200  rounded-xl hidden;
 
     & input {
       @apply w-11/12 p-2  focus:outline-none placeholder:text-black;
+    }
+  }
+
+  .user-area {
+    @apply flex gap-5  font-semibold leading-4 items-center;
+  }
+  .account-area {
+    @apply hidden md:flex gap-2;
+  }
+
+  .navbar {
+    @apply flex-wrap items-center flex-row lg:gap-1 justify-center  hidden lg:flex text-xs lg:text-sm;
+
+    & > div {
+      @apply flex  gap-2 w-fit;
+    }
+    & img {
+      @apply size-4;
+    }
+
+    & ul {
+      @apply flex  lg:gap-4;
+    }
+
+    & span {
+      @apply font-bold;
+    }
+
+    & ul li a {
+      @apply text-black hover:text-blue-500 font-medium ;
     }
   }
 }
