@@ -15,7 +15,7 @@
   }
 
   header {
-    @apply flex flex-col gap-4 justify-center items-center;
+    @apply flex flex-col gap-4 justify-center items-center mb-5;
   }
 }
 
@@ -35,13 +35,13 @@
     }
   }
   .upper-header-container {
-    @apply w-full flex flex-col items-center gap-3 px-4 justify-center lg:px-40;
+    @apply w-full flex flex-col items-center gap-3 px-4 justify-center xl:px-40;
   }
   .upper-wrapper {
     @apply flex gap-4 justify-around mt-2 mb-4 items-center w-full lg:flex-row w-full;
 
     & #menu-item {
-      @apply lg:hidden ;
+      @apply lg:hidden;
     }
   }
   .cart-container {
@@ -101,7 +101,14 @@
     }
 
     & ul li a {
-      @apply text-black hover:text-blue-500 font-medium ;
+      @apply text-black hover:text-blue-500 font-medium;
     }
+  }
+
+  .super-sale-mb {
+    @apply max-h-[400px] block md:hidden w-screen object-cover;
+  }
+  .super-sale-desk {
+    @apply max-h-[500px] hidden md:block w-screen object-cover;
   }
 }
