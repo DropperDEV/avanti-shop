@@ -5,7 +5,9 @@
   --color-blue-navy: #00264e;
   --color-purple: #6220c1;
   --color-cyan: #5ec0be;
-  --color-gray: #dedede;
+  --color-gray-darker: #dedede;
+  --color-border-gray: #dddddd;
+  --color-gray-light:#F5F5F5;
 }
 
 @layer base {
@@ -16,6 +18,10 @@
 
   header {
     @apply flex flex-col gap-4 justify-center items-center mb-5;
+  }
+
+  footer{
+    @apply mt-6 bg-gray-light pt-5 ;
   }
 }
 
@@ -110,5 +116,50 @@
   }
   .super-sale-desk {
     @apply max-h-[500px] hidden md:block w-screen object-cover;
+  }
+
+  .avanti-footer-container{
+    @apply w-full flex justify-center p-4;
+  }
+
+  .socialmedia-container{
+    @apply flex justify-evenly p-8 mb-3;
+  }
+
+  .footer-article {
+    @apply border border-border-gray p-4 pr-8;
+  
+    & h4 {
+      @apply font-bold text-lg;
+    }
+  
+    & img {
+      @apply size-4 transition-transform duration-300;
+    }
+  }
+  
+
+  .footer-links {
+    @apply mt-3
+  }
+
+  
+  .payment-method-container {
+    @apply flex  w-full justify-center gap-6 flex-wrap p-5  mt-4;
+
+    & img {
+      @apply size-7;
+    }
+  }
+
+  .bottom-footer-wrapper{
+    @apply flex flex-col bg-white p-4 pt-7;
+  }
+
+  .footer-text {
+    @apply text-center text-xs mb-6;
+  }
+  .partners-container {
+    @apply flex   w-full justify-evenly items-center p-4 bg-white;
   }
 }
