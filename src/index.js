@@ -1,16 +1,18 @@
-const header = document.getElementById("article-header");
-const links = document.getElementById("footer-links");
-const arrow = document.getElementById("article-arrow");
+document.querySelectorAll(".footer__section").forEach((article) => {
+  const header = article.querySelector(".footer__section-header");
+  const links = article.querySelector(".footer__section-links");
+  const arrow = article.querySelector(".footer__section-arrow");
 
-let isOpen = false;
+  let isOpen = false;
 
-header.addEventListener("click", () => {
-  if (!isOpen) {
-    links.style.maxHeight = links.scrollHeight + "px"; // abre suavemente
-    arrow.classList.add("rotate-180");
-  } else {
-    links.style.maxHeight = "0"; // fecha suavemente
-    arrow.classList.remove("rotate-180");
-  }
-  isOpen = !isOpen;
+  header.addEventListener("click", () => {
+    if (!isOpen) {
+      links.style.maxHeight = links.scrollHeight + "px";
+      arrow.classList.add("rotate-180");
+    } else {
+      links.style.maxHeight = "0";
+      arrow.classList.remove("rotate-180");
+    }
+    isOpen = !isOpen;
+  });
 });
