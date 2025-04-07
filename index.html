@@ -10,53 +10,58 @@
       rel="stylesheet"
     />
     <title>Avanti Shop</title>
-    <script type="module" crossorigin src="/avanti-shop/assets/index-BAsY-GXL.js"></script>
-    <link rel="stylesheet" crossorigin href="/avanti-shop/assets/index-DuTfmc6Q.css">
+    <script type="module" crossorigin src="/avanti-shop/assets/index-_kM-U5td.js"></script>
+    <link rel="stylesheet" crossorigin href="/avanti-shop/assets/index-DCKKUB_t.css">
   </head>
   <body>
-    <header>
-      <div class="disclaimer">
+    <header class="header">
+      <div class="header__banner-discount">
         <p>
           Ganhe <strong>R$10,00</strong> de desconto no seu primeiro pedido.
           Utilize o cupom <span>DESCONTO10</span>
         </p>
       </div>
-      <div class="upper-header-container">
-        <div class="upper-wrapper">
+
+      <div class="header__top">
+        <div class="header__content">
           <img src="menu-icon.svg" alt="Menu" id="menu-item" />
-          <div class="label-input-wrapper">
+
+          <div class="header__logo-search-wrapper">
             <img src="avanti-logo.svg" alt="Avanti" />
-            <div class="input-container-desk">
-              <input type="text" placeholder="Digite aqui oque você procura" />
+            <div class="header__search-desktop">
+              <input type="text" placeholder="Digite aqui o que você procura" />
               <img src="search-icon.svg" alt="Pesquisa" />
             </div>
           </div>
-          <div class="user-area">
-            <div class="account-area">
-              <img src="user-icon.svg" alt="Usuario" />
+
+          <div class="header__user-actions">
+            <div class="header__user-profile">
+              <img src="user-icon.svg" alt="Usuário" />
               <p>
                 Olá,<br />
                 Nome cliente!
               </p>
             </div>
 
-            <div class="cart-container">
+            <div class="header__cart-button">
               <span>2</span>
               <img src="cart-icon.svg" alt="Carrinho" />
             </div>
           </div>
         </div>
-        <div class="input-container-mobile">
-          <input type="text" placeholder="Digite aqui oque você procura" />
+
+        <div class="header__search-mobile">
+          <input type="text" placeholder="Digite aqui o que você procura" />
           <img src="search-icon.svg" alt="Pesquisa" />
         </div>
       </div>
+
       <nav class="navbar">
-        <div>
+        <div class="navbar__all-categories">
           <img src="menu-icon.svg" alt="Menu" />
           <span>Todas as Categorias</span>
         </div>
-        <ul>
+        <ul class="navbar__links">
           <li><a href="">Departamento</a></li>
           <li><a href="">Departamento</a></li>
           <li><a href="">Departamento</a></li>
@@ -68,65 +73,91 @@
         </ul>
       </nav>
     </header>
-    <img class="super-sale-mb" src="super-sale-mb.svg" alt="Super Sale" />
-    <img class="super-sale-desk" src="super-sale-desk.png" alt="Super Sale" />
 
-    <footer>
-      <div class="avanti-footer-container">
-        <img src="avanti-logo.svg" alt="AVANTI" class="" />
+    <main>
+      <img class="promo-banner promo-banner--mobile" src="super-sale-mb.svg" alt="Super Sale" />
+      <img class="promo-banner promo-banner--desktop" src="super-sale-desk.png" alt="Super Sale" />
+    </main>
+
+    <footer class="footer">
+      <div class="footer__logo">
+        <img src="avanti-logo.svg" alt="AVANTI" />
       </div>
 
-      <div class="socialmedia-container">
-        <img src="instagram.svg" alt="instagram" />
+      <div class="footer__social-media">
+        <img src="instagram.svg" alt="Instagram" />
         <img src="facebook.svg" alt="Facebook" />
-        <img src="youtube.svg" alt="Youtube" />
-        <img src="tiktok.svg" alt="Tiktok" />
+        <img src="youtube.svg" alt="YouTube" />
+        <img src="tiktok.svg" alt="TikTok" />
       </div>
 
-      <article class="footer-article">
-        <div class="flex justify-between items-center w-full cursor-pointer" id="article-header">
+      <article class="footer__section">
+        <div class="footer__section-header">
           <h4>Institucional</h4>
-          <img src="bottom-arrow.svg" alt="Baixo" id="article-arrow" />
+          <img src="bottom-arrow.svg" alt="Expandir" class="footer__section-arrow" />
         </div>
-      
-        <div id="footer-links" class="overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+        <div class="footer__section-links">
           <h5>Sobre Nós</h5>
           <h5>Nossas Lojas</h5>
           <h5>Privacidade e Segurança</h5>
           <h5>Termos e Condições</h5>
         </div>
       </article>
-      
-      
 
-      <div class="payment-method-container">
-        <img src="amex.svg" alt="amex" /><img
-          src="mastercard.svg"
-          alt="mastercard"
-        /><img src="visa.svg" alt="visa" /><img
-          src="hipercard.svg"
-          alt="hipercard"
-        /><img src="elo.svg" alt="elo" /><img
-          src="dinners-club.svg"
-          alt="dinners club"
-        /><img src="paypal.svg" alt="paypal" /><img
-          src="pix.svg"
-          alt="pix"
-        /><img src="boleto.svg" alt="boleto" />
+      <article class="footer__section">
+        <div class="footer__section-header">
+          <h4>Central de Ajuda</h4>
+          <img src="bottom-arrow.svg" alt="Expandir" class="footer__section-arrow" />
+        </div>
+        <div class="footer__section-links">
+          <h5>Fale Conosco</h5>
+          <h5>Frete e Entrega</h5>
+          <h5>Trocas e Devoluções</h5>
+          <h5>Formas de Pagamento</h5>
+          <h5>FAQ</h5>
+        </div>
+      </article>
+
+      <article class="footer__section">
+        <div class="footer__section-header">
+          <h4>Atendimento</h4>
+          <img src="bottom-arrow.svg" alt="Expandir" class="footer__section-arrow" />
+        </div>
+        <div class="footer__section-links">
+          <h5>Telefone: (00) 1234-5678</h5>
+          <h5>E-mail: exemplo@exemplo.com.br</h5>
+          <h5>Horário de Atendimento:</h5>
+          <ul>
+            <li>Segunda a Sábado: 07h00 às 23h00</li>
+            <li>Domingos e Feriados: 07h00 às 21h00</li>
+          </ul>
+        </div>
+      </article>
+
+      <div class="footer__payment-methods">
+        <img src="amex.svg" alt="Amex" />
+        <img src="mastercard.svg" alt="Mastercard" />
+        <img src="visa.svg" alt="Visa" />
+        <img src="hipercard.svg" alt="Hipercard" />
+        <img src="elo.svg" alt="Elo" />
+        <img src="dinners-club.svg" alt="Diners Club" />
+        <img src="paypal.svg" alt="Paypal" />
+        <img src="pix.svg" alt="Pix" />
+        <img src="boleto.svg" alt="Boleto" />
       </div>
 
-      <div class="bottom-footer-wrapper">
-        <p class="footer-text">
+      <div class="footer__bottom">
+        <p class="footer__description">
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
           nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
           volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci.
         </p>
 
-        <div class="partners-container">
-          <img src="letsencrypt.svg" alt="let´s encrypt" />
-          <img src="vtex-pci-200.svg" alt="vtex pci 200" />
-          <img src="min-avanti.svg" alt="vtex" />
-          <img src="vtex.svg" alt="vtex" />
+        <div class="footer__partners">
+          <img src="letsencrypt.svg" alt="Let's Encrypt" />
+          <img src="vtex-pci-200.svg" alt="VTEX PCI 200" />
+          <img src="min-avanti.svg" alt="Avanti" />
+          <img src="vtex.svg" alt="VTEX" />
         </div>
       </div>
     </footer>
