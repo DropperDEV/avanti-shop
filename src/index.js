@@ -1,4 +1,4 @@
-document.querySelectorAll(".footer__section").forEach((article) => {
+document.querySelectorAll(".footer__section--mobile").forEach((article) => {
   const header = article.querySelector(".footer__section-header");
   const links = article.querySelector(".footer__section-links");
   const arrow = article.querySelector(".footer__section-arrow");

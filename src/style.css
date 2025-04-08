@@ -7,7 +7,7 @@
   --color-cyan: #5ec0be;
   --color-gray-darker: #dedede;
   --color-border-gray: #dddddd;
-  --color-gray-light: #F5F5F5;
+  --color-gray-light: #f5f5f5;
 }
 
 @layer base {
@@ -127,55 +127,81 @@
     }
   }
 
-  .footer__company{
-    @apply flex flex-col justify-center items-center pt-4
+  /* ========= Footer Layout Principal ========= */
+.footer__upper {
+  @apply flex flex-col lg:flex-row lg:justify-center lg:items-center lg:gap-32 lg:py-8;
+}
+
+/* ========= Informações da Empresa ========= */
+.footer__company {
+  @apply flex flex-col justify-center items-center pt-4 lg:pt-0;
+}
+
+.footer__company-logo {
+  @apply w-full flex justify-center p-4;
+}
+
+.footer__company-social-media {
+  @apply flex justify-evenly p-8 mb-3 w-full gap-4;
+}
+
+/* ========= Seção Mobile ========= */
+.footer__section--mobile {
+  @apply border border-border-gray p-4 pr-8 lg:hidden;
+}
+
+/* ========= Wrapper de Seções para Desktop ========= */
+.footer__section-wrapper--desk {
+  @apply flex justify-center items-start gap-16 hidden lg:flex;
+
+  & h4 {
+    @apply font-bold text-base mb-2;
+  }
+}
+
+/* ========= Seção Individual para Desktop ========= */
+.footer__section--desk {
+  @apply flex flex-col gap-1 text-sm;
+}
+
+/* ========= Cabeçalho das Seções (usado no toggle mobile) ========= */
+.footer__section-header {
+  @apply flex justify-between items-center w-full cursor-pointer;
+
+  & h4 {
+    @apply font-bold text-lg;
   }
 
-  .footer__company-logo {
-    @apply w-full flex justify-center p-4;
+  & img {
+    @apply size-4 transition-transform duration-300;
   }
+}
 
-  .footer__company-social-media {
-    @apply flex justify-evenly p-8 mb-3 w-full;
+/* ========= Links dentro das Seções (expansíveis no mobile) ========= */
+.footer__section-links {
+  @apply overflow-hidden max-h-0 transition-all duration-500 ease-in-out;
+}
+
+/* ========= Métodos de Pagamento ========= */
+.footer__payment-methods {
+  @apply flex w-full justify-center gap-6 flex-wrap p-5 mt-4 lg:py-8;
+
+  & img {
+    @apply size-7;
   }
+}
 
-  .footer__section {
-    @apply border border-border-gray p-4 pr-8 ;
+/* ========= Rodapé Inferior ========= */
+.footer__bottom {
+  @apply flex flex-col bg-white p-4 pt-7;
+}
 
-    & h4 {
-      @apply font-bold text-lg;
-    }
+.footer__description {
+  @apply text-center text-xs mb-6;
+}
 
-    & img {
-      @apply size-4 transition-transform duration-300;
-    }
-  }
-  .footer__section-header{
-  @apply flex justify-between items-center w-full cursor-pointer;}
+.footer__partners {
+  @apply flex w-full justify-evenly lg:justify-center lg:gap-8 items-center p-4 bg-white;
+}
 
-
-  .footer__section-links {
-    @apply overflow-hidden max-h-0 transition-all duration-500 ease-in-out;
-  }
-
-
-  .footer__payment-methods {
-    @apply flex w-full justify-center gap-6 flex-wrap p-5 mt-4;
-
-    & img {
-      @apply size-7;
-    }
-  }
-
-  .footer__bottom {
-    @apply flex flex-col bg-white p-4 pt-7;
-  }
-
-  .footer__description {
-    @apply text-center text-xs mb-6;
-  }
-
-  .footer__partners {
-    @apply flex w-full justify-evenly items-center p-4 bg-white;
-  }
 }
