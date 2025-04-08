@@ -127,12 +127,16 @@
     }
   }
 
-  .footer__logo {
+  .footer__company{
+    @apply flex flex-col justify-center items-center pt-4
+  }
+
+  .footer__company-logo {
     @apply w-full flex justify-center p-4;
   }
 
-  .footer__social-media {
-    @apply flex justify-evenly p-8 mb-3;
+  .footer__company-social-media {
+    @apply flex justify-evenly p-8 mb-3 w-full;
   }
 
   .footer__section {
