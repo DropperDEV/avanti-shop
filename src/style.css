@@ -131,11 +131,20 @@
   /* ========= Banners Promocionais ========= */
   .promo-banner {
     &.promo-banner--mobile {
-      @apply max-h-[400px] block md:hidden w-screen object-cover;
+      @apply max-h-[400px] block md:hidden w-full object-cover;
     }
 
     &.promo-banner--desktop {
-      @apply max-h-[500px] hidden md:block w-screen object-cover;
+      @apply max-h-[500px] hidden md:block w-full object-cover;
+    }
+  }
+
+  /* ========= Banner nos contate ========= */
+  .main__contact-us-banner {
+    @apply bg-[url(/escritorio-entrada-mobile.svg)] md:bg-[url(/escritorio-entrada-desk.svg)] mb-10 w-full bg-cover bg-center object-cover bg-no-repeat h-[450px] md:h-[700px] flex justify-center items-center;
+
+    & p {
+      @apply bg-blue text-white text-center p-4 mt-4 w-full md:text-lg lg:text-2xl md:p-6 lg:p-10 font-light;
     }
   }
 
@@ -160,7 +169,7 @@
 
   /* ========= Área dos Inputs (Nome e E-mail) ========= */
   .main__newsletter-input-area {
-    @apply flex flex-col gap-4 lg:flex-row ;
+    @apply flex flex-col gap-4 lg:flex-row;
 
     & input {
       @apply bg-white p-4 lg:px-3 lg:py-2 rounded-lg  placeholder:text-[#303030] focus:outline-none;
