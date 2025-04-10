@@ -5,6 +5,7 @@
   --color-blue-navy: #00264e;
   --color-purple: #6220c1;
   --color-cyan: #5ec0be;
+  --color-gray-darkest: #303030;
   --color-gray-darker: #dedede;
   --color-border-gray: #dddddd;
   --color-gray-light: #f5f5f5;
@@ -22,6 +23,10 @@
 
   footer {
     @apply mt-6 bg-gray-light pt-5;
+  }
+
+  main{
+    @apply w-full
   }
 }
 
@@ -139,9 +144,75 @@
     }
   }
 
+  .main__products {
+    @apply p-3 md:p-4 flex flex-col gap-4 mt-6 mx-auto max-w-[1200px];
+  }
+
+  .main__products-header {
+    @apply flex justify-between;
+
+    & h2 {
+      @apply font-bold text-lg;
+    }
+
+    & a {
+      @apply underline lg:no-underline  font-bold text-gray-darkest;
+    }
+  }
+
+  .main__products-caroussel{
+    @apply flex gap-1 lg:gap-3;
+  }
+
+  .main__product {
+    @apply flex flex-col  rounded-xl border-1 border-border-gray p-3 w-44 md:w-56;
+
+    & button {
+      @apply bg-blue w-full p-2 rounded-lg text-white mt-2;
+    }
+  }
+
+  .main__product-img {
+    @apply relative z-0 mt-1;
+
+    & span {
+      @apply absolute top-0 left-0 bg-blue-navy px-2 py-1 text-[10px] text-center md:text-xs text-white rounded-lg uppercase;
+    }
+  }
+
+  .main__product-name {
+    @apply text-base w-full mb-3 text-justify;
+  }
+
+  .main__product-price-area {
+    @apply flex  items-center gap-4;
+  }
+
+  .main__product-price {
+    @apply flex flex-col text-base;
+    & span {
+      @apply line-through text-gray-darkest text-xs;
+    }
+    & p {
+      @apply font-bold;
+    }
+  }
+
+  .main__product-discount {
+    @apply bg-cyan mb-5 px-3 py-0.5 uppercase text-white text-xs rounded-md text-center whitespace-nowrap ;
+  }
+
+  .main__product-installment {
+    @apply text-[11px] md:text-xs;
+    & span {
+      @apply font-bold ;
+    }
+  }
+
   /* ========= Banner nos contate ========= */
   .main__contact-us-banner {
-    @apply bg-[url(/escritorio-entrada-mobile.svg)] md:bg-[url(/escritorio-entrada-desk.svg)] mb-10 w-full bg-cover bg-center object-cover bg-no-repeat h-[450px] md:h-[700px] flex justify-center items-center;
+    @apply bg-[url(/escritorio-entrada-mobile.svg)] md:bg-[url(/escritorio-entrada-desk.svg)] mb-10 w-full 
+    bg-cover bg-center object-cover bg-no-repeat h-[450px] md:h-[700px] flex justify-center items-center;
 
     & p {
       @apply bg-blue text-white text-center p-4 mt-4 w-full md:text-lg lg:text-2xl md:p-6 lg:p-10 font-light;
