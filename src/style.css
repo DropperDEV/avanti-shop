@@ -25,8 +25,8 @@
     @apply mt-6 bg-gray-light pt-5;
   }
 
-  main{
-    @apply w-full
+  main {
+    @apply w-full;
   }
 }
 
@@ -145,7 +145,7 @@
   }
 
   .main__products {
-    @apply p-3 md:p-4 flex flex-col gap-4 mt-6 mx-auto max-w-[1200px];
+    @apply p-3 md:p-4 flex flex-col gap-4 mt-6 mx-auto lg:max-w-[1000px] xl:max-w-[1200px];
   }
 
   .main__products-header {
@@ -160,12 +160,25 @@
     }
   }
 
-  .main__products-caroussel{
-    @apply flex gap-1 lg:gap-3;
+  .main__products-carousel {
+    @apply flex gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-2 px-3;
   }
+  .main__products-carousel-left,
+  .main__products-carousel-right {
+    @apply absolute top-1/2 -translate-y-1/2 bg-white p-2 shadow rounded-full z-10 border-blue border-1 hidden lg:block;
+  }
+  
+  .main__products-carousel-left {
+    @apply -left-3;
+  }
+  
+  .main__products-carousel-right {
+    @apply -right-3;
+  }
+  
 
   .main__product {
-    @apply flex flex-col  rounded-xl border-1 border-border-gray p-3 w-44 md:w-56;
+    @apply flex flex-col  rounded-xl border-1 border-border-gray p-3 w-44 md:w-56 flex-shrink-0 snap-start;
 
     & button {
       @apply bg-blue w-full p-2 rounded-lg text-white mt-2;
@@ -199,13 +212,13 @@
   }
 
   .main__product-discount {
-    @apply bg-cyan mb-5 px-3 py-0.5 uppercase text-white text-xs rounded-md text-center whitespace-nowrap ;
+    @apply bg-cyan mb-5 px-3 py-0.5 uppercase text-white text-xs rounded-md text-center whitespace-nowrap;
   }
 
   .main__product-installment {
     @apply text-[11px] md:text-xs;
     & span {
-      @apply font-bold ;
+      @apply font-bold;
     }
   }
 
@@ -340,4 +353,13 @@
   .footer__partners {
     @apply flex w-full justify-evenly lg:justify-center lg:gap-8 items-center p-4 bg-white;
   }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
