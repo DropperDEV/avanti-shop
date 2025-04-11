@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 @theme {
   --color-blue: #005cff;
@@ -112,7 +113,7 @@
   .navbar {
     @apply flex-wrap items-center flex-row lg:gap-1 justify-center hidden lg:flex text-xs lg:text-sm;
 
-    & > div {
+    & div {
       @apply flex gap-2 w-fit;
     }
 
@@ -144,82 +145,135 @@
     }
   }
 
+  /* === SECTION: Produtos Principais === */
   .main__products {
-    @apply p-3 md:p-4 flex flex-col gap-4 mt-6 mx-auto lg:max-w-[1000px] xl:max-w-[1200px];
+    @apply p-3 md:p-4 flex flex-col gap-4 mt-6 mx-auto lg:max-w-[1000px] xl:max-w-[1200px] mb-12;
   }
 
+  /* === HEADER do bloco de produtos === */
   .main__products-header {
     @apply flex justify-between;
 
     & h2 {
-      @apply font-bold text-lg;
+      @apply font-bold text-lg; /* Título */
     }
 
     & a {
-      @apply underline lg:no-underline  font-bold text-gray-darkest;
+      @apply underline lg:no-underline font-bold text-gray-darkest; /* Link "ver mais" */
     }
   }
 
+  /* === Carrossel de produtos === */
   .main__products-carousel {
     @apply flex gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-2 px-3;
+    /* scroll-smooth: rolagem suave
+      snap-x: trava horizontal
+      snap-mandatory: força o snap
+      pb-2: espaço inferior para os dots */
   }
+
+  /* === Botões de navegação do carrossel === */
   .main__products-carousel-left,
   .main__products-carousel-right {
     @apply absolute top-1/2 -translate-y-1/2 bg-white p-2 shadow rounded-full z-10 border-blue border-1 hidden lg:block;
+    /* centralizados verticalmente, visíveis apenas em telas grandes */
   }
-  
-  .main__products-carousel-left {
-    @apply -left-3;
-  }
-  
-  .main__products-carousel-right {
-    @apply -right-3;
-  }
-  
 
+  .main__products-carousel-left {
+    @apply -left-3; /* Lado esquerdo */
+  }
+
+  .main__products-carousel-right {
+    @apply -right-3; /* Lado direito */
+  }
+
+  /* === Produto individual no carrossel === */
   .main__product {
-    @apply flex flex-col  rounded-xl border-1 border-border-gray p-3 w-44 md:w-56 flex-shrink-0 snap-start;
+    @apply flex flex-col rounded-xl border-1 border-border-gray p-3 w-44 md:w-56 flex-shrink-0 snap-start;
+    /* snap-start: trava o scroll nesse item */
 
     & button {
-      @apply bg-blue w-full p-2 rounded-lg text-white mt-2;
+      @apply bg-blue w-full p-2 rounded-lg text-white mt-2; /* Botão de ação */
     }
   }
 
+  /* === Imagem do produto com selo === */
   .main__product-img {
     @apply relative z-0 mt-1;
 
     & span {
       @apply absolute top-0 left-0 bg-blue-navy px-2 py-1 text-[10px] text-center md:text-xs text-white rounded-lg uppercase;
+      /* Selo "novo", "promoção", etc */
     }
   }
 
+  /* === Nome do produto === */
   .main__product-name {
     @apply text-base w-full mb-3 text-justify;
   }
 
+  /* === Área de preço + desconto === */
   .main__product-price-area {
-    @apply flex  items-center gap-4;
+    @apply flex items-center gap-4;
   }
 
+  /* === Preço principal e preço riscado === */
   .main__product-price {
     @apply flex flex-col text-base;
+
     & span {
-      @apply line-through text-gray-darkest text-xs;
+      @apply line-through text-gray-darkest text-xs; /* Preço antigo */
     }
+
     & p {
-      @apply font-bold;
+      @apply font-bold; /* Preço atual */
     }
   }
 
+  /* === Selo de desconto === */
   .main__product-discount {
     @apply bg-cyan mb-5 px-3 py-0.5 uppercase text-white text-xs rounded-md text-center whitespace-nowrap;
   }
 
+  /* === Parcelamento === */
   .main__product-installment {
     @apply text-[11px] md:text-xs;
+
     & span {
-      @apply font-bold;
+      @apply font-bold; /* valor da parcela */
     }
+  }
+
+  .main__banner-and-text {
+    @apply flex flex-col mx-auto gap-7 sm:gap-2 sm:p-4 sm:flex-row md:max-w-[1200px] mb-10 ;
+
+    & article {
+      @apply justify-center px-4 flex flex-col gap-4;
+    }
+
+    & h2 {
+      @apply font-bold text-xl uppercase md:text-2xl;
+    }
+    
+  }
+
+  .main__banner-text--mobile,
+  .main__banner-text--desk {
+    @apply font-normal text-black text-sm  lg:text-lg;
+  }
+
+  .main__banner-text--mobile {
+    @apply lg:hidden;
+  }
+  .main__banner-text--desk {
+    @apply hidden lg:block;
+  }
+
+  .main__banner-img--mobile {
+    @apply w-full sm:hidden;
+  }
+  .main__banner-img--desk {
+    @apply sm:w-1/2 hidden sm:block;
   }
 
   /* ========= Banner nos contate ========= */
